@@ -24,7 +24,7 @@ def karatsuba(x: int, y: int) -> int:
     return ac * 10**(2*m) + ad_bc * 10**m + bd
 
 
-def split(number_str: str, digits: int) -> int:
+def split(number_str: str, digits: int) -> tuple[int, int]:
     left_half = int(number_str[:digits])
     right_half = int(number_str[digits:])
     return left_half, right_half

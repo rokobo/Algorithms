@@ -24,21 +24,21 @@ def test_median_pivot() -> None:
 
 
 def test_lo_largeArray() -> None:
-    with open('tests/RandomNumbers.txt', 'r') as file:
+    with open('tests/LargeArrayQuicksort.txt', 'r') as file:
         integers = file.read()
     arr = [int(x) for x in integers.split()]
     assert (arr[i] <= arr[i+1] for i in range(len(arr)-1))
 
 
 def test_hi_largeArray() -> None:
-    with open('tests/RandomNumbers.txt', 'r') as file:
+    with open('tests/LargeArrayQuicksort.txt', 'r') as file:
         integers = file.read()
     arr = [int(x) for x in integers.split()]
     assert (arr[i] <= arr[i+1] for i in range(len(arr)-1))
 
 
 def test_median_largeArray() -> None:
-    with open('tests/RandomNumbers.txt', 'r') as file:
+    with open('tests/LargeArrayQuicksort.txt', 'r') as file:
         integers = file.read()
     arr = [int(x) for x in integers.split()]
     assert (arr[i] <= arr[i+1] for i in range(len(arr)-1))

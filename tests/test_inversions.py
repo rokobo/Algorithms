@@ -52,7 +52,7 @@ def test_random_max_inversions_6() -> None:
 
 
 def test_100K_integer_array() -> None:
-    with open('tests/large_integer_array.txt', 'r') as file:
+    with open('tests/LargeArrayInversions.txt', 'r') as file:
         integers = file.read()
     integers_list = [x for x in integers.split()]
     assert CountInversions(integers_list, len(integers_list))[1] == 2397819672
