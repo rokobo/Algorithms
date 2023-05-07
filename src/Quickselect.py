@@ -49,21 +49,19 @@ def partitionMedianThree(A: list[int], lo: int, hi: int) -> int:
 # Sorts a (portion of an) array, divides it into partitions, then sorts those
 def quickselect(A: list[int], size: int, index: int,
                 partition: Callable[[list[int], int, int], int]) -> int:
-    print(A)
-    print("size:", size, "index:", index)
     if size == 1:
         return A[0]
 
     # Partition array and get the pivot index
     pivot = partition(A, 0, size)
-    print(A)
-    print("pivot:", pivot, "elem:", A[pivot], "case:", 2 if pivot > index else 3)
-    print()
+
     if pivot == index:
         return A[pivot]
     elif pivot > index:
+        # Element is to the left of pivot
         return quickselect(A[:pivot], pivot, index, partition)
     else:  # index > pivot
+        # Element is to the right of pivot
         return quickselect(A[pivot:], size - pivot, index - pivot, partition)
 
 
