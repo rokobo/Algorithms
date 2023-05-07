@@ -1,4 +1,4 @@
-from Algorithms_Specialization.KaratsubaAlgorithm import karatsuba, split
+from src.KaratsubaAlgorithm import split, karatsuba
 
 
 def test_split() -> None:

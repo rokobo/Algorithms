@@ -1,5 +1,5 @@
 from random import randint
-from Algorithms_Specialization.Quicksort import quicksort, partitionHi, partitionLo, partitionMedianThree
+from src.Quicksort import quicksort, partitionHi, partitionLo, partitionMedianThree
 
 
 def test_lo_pivot() -> None:

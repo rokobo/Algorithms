@@ -1,4 +1,4 @@
-from Algorithms_Specialization.CountingInversions import CountInversions
+from src.CountingInversions import CountInversions
 from random import randint
 
 
