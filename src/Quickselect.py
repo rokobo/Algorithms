@@ -17,35 +17,6 @@ def partitionLo(A: list[int], lo: int, hi: int) -> int:
     return i  # return pivot index
 
 
-def partitionHi(A: list[int], lo: int, hi: int) -> int:
-    # set last element as first element to act as pivot
-    A[lo], A[hi - 1] = A[hi - 1], A[lo]
-    return partitionLo(A, lo, hi)
-
-
-def partitionMedianThree(A: list[int], lo: int, hi: int) -> int:
-    # selects median value between first, last and middle elements
-    median = (lo + hi) // 2  # middle value is temporarily set as median
-    first, middle, last = A[lo], A[median], A[hi - 1]
-
-    if first < middle:
-        if middle < last:
-            pass
-        elif first < last:
-            median = hi - 1
-        else:
-            median = lo
-    else:
-        if first < last:
-            median = lo
-        elif middle < last:
-            median = hi - 1
-
-    # set median element as first element to act as pivot
-    A[lo], A[median] = A[median], A[lo]
-    return partitionLo(A, lo, hi)
-
-
 # Sorts a (portion of an) array, divides it into partitions, then sorts those
 def quickselect(A: list[int], size: int, index: int,
                 partition: Callable[[list[int], int, int], int]) -> int:
@@ -62,8 +33,9 @@ def quickselect(A: list[int], size: int, index: int,
         return quickselect(A[:pivot], pivot, index, partition)
     else:  # index > pivot
         # Element is to the right of pivot
-        return quickselect(A[pivot:], size - pivot, index - pivot, partition)
+        return quickselect(A[pivot + 1:], size - pivot - 1,
+                           index - pivot - 1, partition)
 
 
 def QuickSelect(arr, index):
-    return quickselect(arr, len(arr), index, partitionMedianThree)
+    return quickselect(arr, len(arr), index, partitionLo)

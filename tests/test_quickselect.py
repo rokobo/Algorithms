@@ -44,3 +44,4 @@ def test_length_10() -> None:
     assert QuickSelect([8, 2, 5, 9, 1, 6, 3, 10, 4, 7], 5) == 6
     assert QuickSelect([8, 2, 5, 9, 1, 6, 3, 10, 4, 7], 8) == 9
     assert QuickSelect([8, 2, 5, 9, 1, 6, 3, 10, 4, 7], 9) == 10
+    assert QuickSelect([56, 40, 61, 7, 4, 61, 71, 48, 58, 16], 9) == 71
