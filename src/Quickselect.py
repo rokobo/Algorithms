@@ -33,8 +33,8 @@ def quickselect(A: list[int], size: int, index: int,
         return quickselect(A[:pivot], pivot, index, partition)
     else:  # index > pivot
         # Element is to the right of pivot
-        return quickselect(A[pivot + 1:], size - pivot - 1,
-                           index - pivot - 1, partition)
+        return quickselect(
+            A[pivot + 1:], size - pivot - 1, index - pivot - 1, partition)
 
 
 def QuickSelect(arr, index):

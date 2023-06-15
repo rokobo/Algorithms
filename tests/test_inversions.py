@@ -1,4 +1,4 @@
-from src.CountingInversions import CountInversions
+from CountingInversions import CountInversions
 from random import randint
 
 
