@@ -1,4 +1,4 @@
-from Quickselect import QuickSelect
+from quickselect import QuickSelect
 
 
 def test_length_3() -> None:

@@ -1,5 +1,5 @@
 import os
-from MinimumCut import minimum_cut
+from minimum_cut import minimum_cut
 
 
 def test_medium_graphs() -> None:
