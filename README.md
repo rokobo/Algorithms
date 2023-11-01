@@ -1,5 +1,6 @@
 # Algorithms specialization
 
+- Knapsack problem.
 - Weighted Independend Set algorithm.
 - Huffman codes.
 - Kruskal's algorithm.
