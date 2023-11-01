@@ -1,5 +1,7 @@
 # Algorithms specialization
 
+- Weighted Independend Set algorithm.
+- Huffman codes.
 - Kruskal's algorithm.
 - Prim's algorithm.
 - Greedy scheduling algorithm.
