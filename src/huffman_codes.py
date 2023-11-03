@@ -1,6 +1,5 @@
 """Algorithms for Huffman codes."""
 import heapq
-from rich import print
 
 
 class Huffman:
